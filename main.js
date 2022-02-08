@@ -23,9 +23,7 @@ const app = {
     app.selectMax = document.getElementById("maxBtn");
     app.selectMax.addEventListener("change", () => {
       app.max = app.selectMax.value;
-      console.log(app.max)
       app.arrayChart.forEach(chart => {
-        console.log('change')
         app.randomizeData(app.max)
         chart.shuffle(app.data,app.label)
       })
@@ -33,17 +31,15 @@ const app = {
     //btn 'run algo'
     app.runBtn = document.getElementById('run__btn')
     app.runBtn.addEventListener('click', () => {
-      for (let i = 0; i < app.arrayChart.length; i++){
-         console.log(app.arrayChart)
-         bubbleSort(app.arrayChart[i])  
-       }
-  
+      app.arrayChart.forEach(chart => {
+      bubbleSort(chart)
+      })
     })
     //btn shuffle data
     app.shuffleBtn = document.getElementById('shuffle__btn')
     app.shuffleBtn.addEventListener('click', () => {
-      app.randomizeData(app.max)
       app.arrayChart.forEach(chart => {
+        app.randomizeData(app.max)
         chart.shuffle(app.data,app.label)
       })
     })
