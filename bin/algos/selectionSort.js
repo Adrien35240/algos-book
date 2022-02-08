@@ -1,5 +1,5 @@
 
-export function selectionSort(data) {
+export function selectionSort(ctx, data) {
     let n = data.length;
 
     for (let i = 0; i < n; i++) {

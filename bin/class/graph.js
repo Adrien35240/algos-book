@@ -2,28 +2,14 @@ import Chart from 'chart.js/auto';
 export class graph {
     data = []
     label = []
-    chart = null
-    constructor() {
+    constructor(id, ctx, data, label) {
+        this.id = id
+        this.ctx = ctx,
+            this.data = data,
+            this.label = label
     }
-    generateData(max) {
-        for (let i = 0; i < max; i++) {
-            this.data.push(i)
-            this.label.push(`${i}`)
-        }
-        this.data = this.shuffle(this.data)
-    };
-    shuffle(array) {
-        let currentIndex = array.length, randomIndex;
-        while (currentIndex != 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-            [array[currentIndex], array[randomIndex]] = [
-                array[randomIndex], array[currentIndex]];
-        }
-        return array;
-    }
-    createGraph(ctx) {
-       this.chart = new Chart(ctx, {
+    init() {
+        this.chart = new Chart(this.ctx, {
             type: 'bar',
             data: {
                 labels: this.label,
@@ -39,27 +25,20 @@ export class graph {
                     borderWidth: 1
                 }]
             },
-           options: {
-                animation:false
+            options: {
+                animation: false
             }
         })
     }
-    draw(ctx,max) {
-        this.generateData(max)
-        this.createGraph(ctx)
+    update() {
+        this.chart.update()
     }
-    reShuffle(ctx, max) {
-        this.data = []
-        this.label = []
-        this.chart.destroy()
-        this.generateData(max)
-        this.createGraph(ctx)
-    }
-    reDraw(ctx, data) {
+    shuffle(data,label) {
         this.chart.destroy()
         this.data = data
-        this.createGraph(ctx)
+        this.label = label
+        this.init()
     }
 }
-    
+
 

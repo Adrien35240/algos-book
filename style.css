@@ -10,9 +10,23 @@ html {
   flex-direction: column;
   align-items: center;
 }
+.canvas__container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.algo__container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+}
 .btn__container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .btn{
   background-color: rgba(54, 163, 235, 0.1);
@@ -22,20 +36,22 @@ html {
   border: none;
   width: 10rem;
   letter-spacing: .1rem;
+  transition: ease-in-out .2s background-color;
+
 }
 .btn:hover{
   background-color: rgba(54, 162, 235, 0.3);
 }
 canvas{
-  width: 80ch;
+  width: 40ch;
   height: auto;
 }
 .actions{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 40ch;
 }
 .select{
-  margin-bottom: .1rem;
   padding: .2rem;
   border: 1px solid #2c3e50;;
 }
@@ -52,4 +68,16 @@ canvas{
   background-color: rgba(54, 162, 235, 0.2);
   padding: .4rem;
   border-radius: 10px;
+}
+.algo{
+  width: 100%;
+}
+.algo:hover{
+  background-color: #2ecc7050;
+}
+.create{
+  width: 100%;
+}
+.create:hover{
+  background-color: #f1c40f50;
 }

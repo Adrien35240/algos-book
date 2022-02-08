@@ -6,39 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Algos book</title>
   </head>
+
   <body class="app">
-    
     <h1>Algos Book</h1>
-        <div>
-          <canvas id="canvas"></canvas>
-        </div>
-        <div class="btn__container">
-          <div class="actions">
-            <select id="maxBtn" class="btn select">
-              <option value="100">100</option>
-              <option value="500">500</option>
-              <option value="1000">1000</option>
-              <option value="2000">2000</option>
-              <option value="5000">5000</option>
-              <option value="10000">10000</option>
-              <option value="50000">50000</option>
-              <option value="100000">100000</option>
-            </select>
-            <button class="btn" id="shuffle__btn">Shuffle Data</button>
-          </div>
-          <div class="actions">
-            <select class="btn select" id="algo__btn" >
-                <option value="array.sort()">array.sort()</option>
-                <option value="Selection sort">Selection Sort</option>
-                 <option value="Bubble sort">Bubble sort</option>
-            </select>
-            <button class="btn" id="run__btn">Run Algo</button>
-          </div>
-        </div>
-          <div class="result"
-               id="result"></div>
-
+    <div class="canvas__container" id="canvas__container">
+    </div>
+    <div class="btn__container">
+      <div class="actions">
+        <select id="maxBtn" class="btn select">
+          <option selected value="10">10</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+          <option value="200">200</option>
+          <option value="500">500</option>
+        </select>
+        <button class="btn" id="shuffle__btn">Shuffle Data</button>
+      </div>
+      <div class="actions">
+        <button class="btn create"
+                id="add__btn">add Graph</button>
+        <button class="btn algo" id="run__btn">Run Algo</button>
+      </div>
+    </div>
     <script type="module" src="/main.js"></script>
-
+    <!-- template canvas -->
+    <template id="canvas__template">
+      <div class="algo__container">
+        <canvas class="canvas"></canvas>
+        <select class="btn select" id="algo__btn">
+          <option value="Bubble sort">Bubble sort</option>
+        </select>
+        <div class="result" id="result"></div>
+      </div>
+    </template>
+    <!-- template canvas -->
   </body>
 </html>
