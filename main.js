@@ -6,7 +6,7 @@ import { bubbleSort } from "./bin/algos/bubbleSort";
 import { generateData, generateLabel, shuffle } from "./bin/functions/data";
 const app = {
   selectMax: null,
-  max: 10,
+  max: 50,
   template: null,
   canvasContainer: null,
   canvasId: 0,
@@ -48,6 +48,10 @@ const app = {
     app.addBtn.addEventListener('click', () => {
       app.canvasId++
       app.createTemplate(app.canvasId)
+      app.arrayChart.forEach(chart => {
+        app.randomizeData(app.max)
+        chart.shuffle(app.data, app.label)
+      })
     })
   },
   randomizeData(max) {
