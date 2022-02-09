@@ -10,6 +10,24 @@ html {
   flex-direction: column;
   align-items: center;
 }
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4rem;
+  width: 100%;
+}
+.github__img{
+  width: 30px;
+  height: 30px;
+  margin-left: 4rem;
+  border-radius: 50px;
+  transition: ease-in-out .2s background-color;
+}
+.github__img:hover{
+  cursor: grab;
+  background-color: rgba(54, 162, 235, 0.3);
+}
 .canvas__container{
   display: flex;
   justify-content: center;
