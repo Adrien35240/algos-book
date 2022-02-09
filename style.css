@@ -91,3 +91,11 @@ canvas{
   text-align: left;
 
 }
+footer{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+footer, a{
+  color: #2c3e50;
+}
