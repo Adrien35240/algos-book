@@ -1,7 +1,5 @@
 import "./style.css";
 import { graph } from "./bin/class/graph";
-import { sortJs } from "./bin/algos/sortJs";
-import { selectionSort } from "./bin/algos/selectionSort";
 import { bubbleSort } from "./bin/algos/bubbleSort";
 import { generateData, generateLabel, shuffle } from "./bin/functions/data";
 const app = {
@@ -62,13 +60,14 @@ const app = {
     return app.data
   },
   createTemplate(id) {
-    
     app.randomizeData(app.max)
     // -------template--------
     app.template = document.getElementById("canvas__template");
     let clone = document.importNode(app.template.content, true)
     const canvas = clone.querySelectorAll('canvas')
     canvas[0].setAttribute("id", `canvas${id}`)
+    const description = clone.getElementById('description')
+    description.innerHTML = `Bubble Sort est l'algorithme de tri simple qui fonctionne en échangeant les éléments adjacents s'ils sont dans le mauvais ordre.`
     app.canvasContainer.appendChild(clone)
     // -------template--------
     app.ctx = document.getElementById(`canvas${id}`).getContext('2d')
@@ -77,9 +76,9 @@ const app = {
     app.arrayChart.push(app.chart)
     app.chart.init()
   },
-  updateChart() {
-
-  },
+  setDescription() {
+    
+  }
 };
 
 window.addEventListener("DOMContentLoaded", () => {

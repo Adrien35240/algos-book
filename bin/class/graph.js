@@ -6,7 +6,6 @@ export class graph {
     colorLabel = [0,2,4,6,8,10,12,14,16,18]
     constructor(id, ctx, data, label) {
         let indexRandom = Math.floor(Math.random() * ((this.color.length)/2)) + 0;
-        console.log(indexRandom)
         let rdmColor = this.colorLabel[indexRandom]
         this.id = id
         this.ctx = ctx,
