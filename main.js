@@ -106,5 +106,4 @@ const app = {
 
 window.addEventListener("DOMContentLoaded", () => {
   app.init();
-  app.createTemplate(app.canvasId)
 });
