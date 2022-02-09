@@ -87,3 +87,7 @@ canvas{
 .create:hover{
   background-color: #f1c40f50;
 }
+.description{
+  text-align: left;
+
+}

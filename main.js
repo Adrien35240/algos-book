@@ -67,7 +67,7 @@ const app = {
     const canvas = clone.querySelectorAll('canvas')
     canvas[0].setAttribute("id", `canvas${id}`)
     const description = clone.getElementById('description')
-    description.innerHTML = `Bubble Sort est l'algorithme de tri simple qui fonctionne en échangeant les éléments adjacents s'ils sont dans le mauvais ordre.`
+    description.innerHTML = `Bubble Sort est l'algorithme de tri simple </br> qui fonctionne en échangeant les éléments adjacents</br> s'ils sont dans le mauvais ordre.`
     app.canvasContainer.appendChild(clone)
     // -------template--------
     app.ctx = document.getElementById(`canvas${id}`).getContext('2d')

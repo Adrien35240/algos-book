@@ -5,7 +5,7 @@ export class graph {
     color = ['#1abc9c50', '#16a085', '#2ecc7150', '#27ae60', '#3498db50', '#2980b9', '#9b59b650', '#8e44ad', '#34495e50', '#2c3e50', '#f1c40f50', '#f39c12', '#e67e2250', '#d35400', '#e74c3c50', '#c0392b', '#ecf0f150', '#bdc3c7', '#95a5a650', '#7f8c8d']
     colorLabel = [0,2,4,6,8,10,12,14,16,18]
     constructor(id, ctx, data, label) {
-        let indexRandom = Math.floor(Math.random() * ((this.color.length)/2)) + 0;
+        let indexRandom = Math.floor(Math.random() * ((this.color.length)/2), 0 + 1) + 0;
         let rdmColor = this.colorLabel[indexRandom]
         this.id = id
         this.ctx = ctx,
