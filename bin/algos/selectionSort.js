@@ -17,5 +17,4 @@ setTimeout(function () {
             chart.update()
         } 
    }, 1); }
-
 }

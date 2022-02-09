@@ -17,8 +17,14 @@ html {
   margin-left: 4rem;
   width: 100%;
 }
-.title,a{
+.title>a{
   text-decoration: none;
+}
+a{
+ text-underline-offset: 2px;
+}
+a:hover{
+  color: #6287ad;
 }
 .github__img{
   width: 30px;

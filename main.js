@@ -88,7 +88,7 @@ const app = {
       }
       if (this.algoBtn.value === "Selection sort") {
         app.chart.algo = "Selection sort"
-        description.innerHTML = `L'algorithme de tri par sélection trie un tableau en trouvant à plusieurs </br> reprises l'élément minimum (en tenant compte de l'ordre croissant)</br>  à partir de la partie non triée et en le plaçant au début.</br> L'algorithme maintient deux sous-tableaux dans un tableau donné.`
+        description.innerHTML = `L'algorithme de tri par sélection, trie un tableau en trouvant à plusieurs </br> reprises l'élément minimum (en tenant compte de l'ordre croissant)</br>  à partir de la partie non triée et en le plaçant au début.</br> L'algorithme maintient deux sous-tableaux dans un tableau donné.`
       }
     })
     app.canvasContainer.appendChild(clone)
@@ -106,4 +106,5 @@ const app = {
 
 window.addEventListener("DOMContentLoaded", () => {
   app.init();
+  app.createTemplate(app.canvasId)
 });
