@@ -61,8 +61,7 @@ html {
   background-color: rgba(54, 162, 235, 0.3);
 }
 canvas{
-  width: 40ch;
-  height: auto;
+  min-width: 60ch;
 }
 .actions{
   display: flex;
@@ -71,21 +70,10 @@ canvas{
 }
 .select{
   padding: .2rem;
-  border: 1px solid #2c3e50;;
 }
-.result{
-  text-align: center;
-  line-height: 3rem;
-  width: 80ch;
-  height: 4rem;
-  font-size: 1rem;
-}
-.result__text{
-  color: #2c3e50;
-  font-weight: 600;
-  background-color: rgba(54, 162, 235, 0.2);
-  padding: .4rem;
-  border-radius: 10px;
+
+.shuffle:hover{
+  background-color: #9c59b650;
 }
 .algo{
   width: 100%;

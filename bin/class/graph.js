@@ -26,6 +26,7 @@ export class graph {
                 }]
             },
             options: {
+                responsive:true,
                 animation: false
             }
         })
