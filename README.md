@@ -33,10 +33,11 @@ L'algorithme maintient deux sous-tableaux dans un tableau donné.
 ```javascript
     // definie le nombre d'iterations en fonction du nombre de data dans array
     for (let i = 0; i < array.length; i++) {
+        // on demarre à l'index minimun non modifier
         let min = i;
         //itere sur l'array avec un offset de i + 1 
             for (let j = i + 1; j < array.length; j++) {
-                // si index + 1 < index
+                // trouve le premier index superieur dons la valeur est inferieure 
             if array[j] < array[min]) {
                 // on assigne la valeur min à l'index j
                 min = j;
@@ -46,9 +47,9 @@ L'algorithme maintient deux sous-tableaux dans un tableau donné.
         if (min != i) {
             // on stock la valeur de l'index i dans une variable temporaire
             let temp = array[i];
-             // on assigne array[min] a l'array[i] cad le premier emplacement non modifier de l'array
+             // on assigne la valeur inferieure trouver precedemment a l'array[i] (cad: le premier emplacement non modifier de l'array)
             array[i] = array[min];
-            // on reassigne la valeur temp à l'emplacement laisser libre précédemment
+            // on reassigne la valeur temporaire à l'emplacement laisser libre précédemment
             array[min] = temp;
         } 
     }
