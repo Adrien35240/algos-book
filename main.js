@@ -19,6 +19,7 @@ const app = {
   arrayChart: [],
   addBtn:null,
   init() {
+    app.canvasContainer = document.getElementById("canvas__container");
     //select nbr data
     app.selectMax = document.getElementById("maxBtn");
     app.selectMax.addEventListener("change", () => {
@@ -61,7 +62,7 @@ const app = {
     return app.data
   },
   createTemplate(id) {
-    app.canvasContainer = document.getElementById("canvas__container");
+    
     app.randomizeData(app.max)
     // -------template--------
     app.template = document.getElementById("canvas__template");
@@ -83,5 +84,4 @@ const app = {
 
 window.addEventListener("DOMContentLoaded", () => {
   app.init();
-  app.createTemplate(app.canvasId)
 });
