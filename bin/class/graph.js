@@ -2,11 +2,19 @@ import Chart from 'chart.js/auto';
 export class graph {
     data = []
     label = []
+    color = ['','#1abc9c50', '#16a085', '#2ecc7150', '#27ae60', '#3498db50', '#2980b9', '#9b59b650', '#8e44ad', '#34495e50', '#2c3e50', '#f1c40f50', '#f39c12', '#e67e2250', '#d35400', '#e74c3c50', '#c0392b', '#ecf0f150', '#bdc3c7', '#95a5a650', '#7f8c8d']
+    colorLabel = [1,3,5,7,9,11,13,15,17,19]
     constructor(id, ctx, data, label) {
+        let indexRandom = Math.floor(Math.random() * ((this.color.length)/2)) + 0;
+        console.log(indexRandom)
+        let rdmColor = this.colorLabel[indexRandom]
         this.id = id
         this.ctx = ctx,
-            this.data = data,
-            this.label = label
+        this.data = data,
+        this.label = label,
+        this.color1 = this.color[rdmColor],
+        this.color2 = this.color[rdmColor + 1]
+
     }
     init() {
         this.chart = new Chart(this.ctx, {
@@ -17,10 +25,10 @@ export class graph {
                     label: 'index',
                     data: this.data,
                     backgroundColor: [
-                        'rgba(54, 162, 235, 0.2)',
+                        this.color1,
                     ],
                     borderColor: [
-                        'rgba(54, 162, 235, 1)',
+                      this.color2,
                     ],
                     borderWidth: 1
                 }]
