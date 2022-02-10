@@ -35,7 +35,6 @@ L'algorithme maintient deux sous-tableaux dans un tableau donné.
     for (let i = 0; i < array.length; i++) {
         // on demarre à l'index minimun non modifier
         let min = i;
-        //itere sur l'array avec un offset de i + 1 
             for (let j = i + 1; j < array.length; j++) {
                 // trouve le premier index superieur dons la valeur est inferieure 
             if array[j] < array[min]) {
